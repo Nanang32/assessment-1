@@ -1,19 +1,22 @@
+/* PENJELASAN*/
+
+/* 1. di element bod sesuai dengan petunjuk pengerjaan saya menggunakan robotofont dan coloring sesuai dengan petunjuk */
 body{
     font-family: 'Roboto', sans-serif;
     background-color: #FAFCFD;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/*9. di baigna ini keitkan halaman login ini di buka menggunakan handphone 600px ke bawah semau komponen yang ada di dalam ini akan tergunakan tapi jika di atas defaulnya akan menggunakan elemenet di luar NO.9 */
+@media only screen and (max-width: 600px) { /* ukuran layar ini hanya aktif jika di akses di 600pxatau smarthope ukuran kecil dan di bawahnya saja*/
     #box-1 {
         margin: 50px;
     }
     #box-2 {
-        display: none;
+        display: none; /* disini saya membuat imageya di hilangkan karena sudah tidak persisis jika di handphone kecil terdapat image yang ukurannya bisa 1/4 dari ukuran komponen dan akan membuat user juga focus untuk login , sesua dengan fungsinya*/
     }
 
     h5{
-        font-size: 24vw;
+        font-size: 24vw; /* satuan font em pada website dektop dan mobil yang saya pahami ada juga responsive text yang menyususaikan ukuran media dengan tulisannya agar tetap nyaman di mata*/
         color: #000000DE;
     }
     small{
@@ -30,30 +33,33 @@ body{
         border-radius: 5px;
     }
 }
-
+/* 2. saya menggunakan ID dikarenakan pemanggilannya hanya satu kali tidak di gunakan di tempat lain, containi ini telah menggunakan flexbox */
 #container{
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
+    display: flex;  /* penggunaan flex disini agar susunana komponen horizontal */
+    justify-content: center; /* memposisikan property berada di tengah layar */
+    margin-top: 100px; /*saya menggunakan margin disini untuk membuat display yang sudah di tengah atas layar  , bisa berada di tengah2 layar*/
 }
+/*3. disini saya membuat spesifik jarak form login dan label sebesar 30 pixel*/
 #label-form{
     margin-bottom: 30px;
     text-align: left;
 }
-
+/*4. ini adalah komponen perta saya namakan dengan box-1 dengan menggunakan jarak antara image dan komnon ini sebesar 50 pixel */
 #box-1 {
     width: 480px;
     margin-right: 50px;
     margin-top: 150px;
 }
-
+/*5. di komponen kedua ini saya tidak memasukkan nilai ke dalam width karena akan menyesuaikan dengan fram dari element img yang saya pasang dengan harapan akan responsive menurut teori yang saya baca di w3schols*/
 #box-2 {
     width:auto;
 }
+/*6 penggunana max-width disni agar gambar ukuran tampak 100 persen sama dengan orignial dan ketika di kecilkan ke ukuran 600px atau handphone tidak akan melar atau terpotong di tambah saya sesuaikan menggunakan fit content  artinay sesuai dengan framse yang saya ataur di awal. */
 img{
     max-width: 100%;
     height: fit-content;
 }
+/*7. element h5 dan small saya rangkum dalam 1 penjelasan karena mirip saja, disini saya mengatur font size sesuai dengan mockup yang ada tetapa pada satuanya saya menggunakan em karena satuan ini khusus font , yang kira2 kalau rumausnya jika di konversi ke px itu bisa dikali 16px (sebagai nilai default font di web)*/
 h5{
     font-size: 1.5em;
     color: #000000DE;
@@ -65,6 +71,7 @@ small{
 :placeholder-shown{
     font-size: 1em;
 }
+/*8. custom button disini pada saat pewarnaan karena defaultnya bootsrap sendiri tidak memiliki warna yang di tugaskan di mockup jadi saya melakukan customize di bagian tombol dan font*/
 .btn{
     font-size: 0.8em;
     background-color: #6200EE;
@@ -73,3 +80,5 @@ small{
 .button1:hover {
     background-color: #6d03ff;
 }
+
+/* PENJELASAN NO 9 KE ATAS (media query)*/
